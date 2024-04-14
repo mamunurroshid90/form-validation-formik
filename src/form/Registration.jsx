@@ -33,7 +33,7 @@ const Registration = () => {
             <p className=" mb-5 font-abel">
               To the Mamunur website for programmers
             </p>
-            <div className=" border rounded p-2 mb-4">
+            <div className=" border rounded p-2 mb-4 relative">
               <label
                 className=" block capitalize font-semibold font-abel"
                 htmlFor="name"
@@ -41,7 +41,7 @@ const Registration = () => {
                 name
               </label>
               <input
-                className=" w-full pr-1 py-1 outline-none"
+                className=" w-full pr-1 pt-1 pb-3 outline-none"
                 type="text"
                 name="name"
                 id="name"
@@ -51,10 +51,12 @@ const Registration = () => {
                 onBlur={handleBlur}
               />
               {errors.name && touched.name ? (
-                <p className=" text-red-500">{errors.name}</p>
+                <p className=" text-red-500 font-abel text-xs absolute left-2 top-[50px] translate-y-1/2">
+                  {errors.name}
+                </p>
               ) : null}
             </div>
-            <div className=" border rounded p-2 mb-4">
+            <div className=" border rounded p-2 mb-4 relative">
               <label
                 className=" block capitalize font-semibold font-abel"
                 htmlFor="email"
@@ -62,7 +64,7 @@ const Registration = () => {
                 email
               </label>
               <input
-                className=" w-full pr-1 py-1 outline-none"
+                className=" w-full pr-1 pt-1 pb-3 outline-none"
                 type="email"
                 name="email"
                 id="email"
@@ -72,10 +74,12 @@ const Registration = () => {
                 onBlur={handleBlur}
               />
               {errors.email && touched.email ? (
-                <p className=" text-red-500">{errors.email}</p>
+                <p className=" text-red-500 font-abel text-xs absolute left-2 top-[50px] translate-y-1/2">
+                  {errors.email}
+                </p>
               ) : null}
             </div>
-            <div className=" border rounded p-2 mb-4">
+            <div className=" border rounded p-2 mb-4 relative">
               <label
                 className=" block capitalize font-semibold font-abel"
                 htmlFor="password"
@@ -83,7 +87,7 @@ const Registration = () => {
                 password
               </label>
               <input
-                className=" w-full pr-1 py-1 outline-none"
+                className=" w-full pr-1 pt-1 pb-3 outline-none"
                 type="password"
                 name="password"
                 id="password"
@@ -93,10 +97,12 @@ const Registration = () => {
                 onBlur={handleBlur}
               />
               {errors.password && touched.password ? (
-                <p className=" text-red-500">{errors.password}</p>
+                <p className=" text-red-500 font-abel text-xs absolute left-2 top-[50px] translate-y-1/2">
+                  {errors.password}
+                </p>
               ) : null}
             </div>
-            <div className=" border rounded p-2 mb-4">
+            <div className=" border rounded p-2 mb-4 relative">
               <label
                 className=" block capitalize font-semibold font-abel"
                 htmlFor="cPassword"
@@ -104,7 +110,7 @@ const Registration = () => {
                 confirm password
               </label>
               <input
-                className=" w-full pr-1 py-1 outline-none"
+                className=" w-full pr-1 pt-1 pb-3 outline-none"
                 type="password"
                 name="confirm_password"
                 id="confirm_password"
@@ -114,7 +120,9 @@ const Registration = () => {
                 onBlur={handleBlur}
               />
               {errors.confirm_password && touched.confirm_password ? (
-                <p className=" text-red-500">{errors.confirm_password}</p>
+                <p className=" text-red-500 font-abel text-xs absolute left-2 top-[50px] translate-y-1/2">
+                  {errors.confirm_password}
+                </p>
               ) : null}
             </div>
             <div className=" flex justify-between items-center mb-7">
@@ -136,7 +144,7 @@ const Registration = () => {
             <span>Sign In now</span>
           </p>
         </div>
-        <div className=" w-[700px] h-[600px]">
+        <div className=" w-[700px] h-[650px]">
           <img className=" w-full h-full" src={FormImage} alt="form-image" />
         </div>
       </div>
